@@ -17,19 +17,21 @@ const corpdatas = dataset;
 
 export const AboutMe: React.FunctionComponent = () => {
     const classes = useStyles();
+    // const url =  `${process.env.PUBLIC_URL}`
+    // // console.log(url)
     return(
         <div className={styles.wrapper}>
             <h1>About me</h1>
             <div className={styles.layout}>
                 <div className={styles.icon}>
-                    <Image src={`${process.env.PUBLIC_URL}/myicon.png`} width={300} height={300} className={styles.circle}/>
+                    <Image src="../public/myicon.png" width={300} height={300} className={styles.circle}/>
                     <div className={styles.text}>sugar</div>
                     <div>
                         <a href="https://twitter.com/sugar235711">
-                            <img src={`${process.env.PUBLIC_URL}/twitter.png`} width={50} height={50} className={styles.circle}/>
+                            <img src="../public/twitter.png" width={50} height={50} className={styles.circle}/>
                         </a>            
                         <a href="https://github.com/toshikingggg">
-                        <img src={`${process.env.PUBLIC_URL}/github.png`} width={50} height={50} className={styles.circle}/>
+                        <img src="../public/github.png" width={50} height={50} className={styles.circle}/>
                         </a>
                     </div>
                 </div>
