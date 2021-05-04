@@ -22,7 +22,7 @@ export const AboutMe: React.FunctionComponent = () => {
             <h1>About me</h1>
             <div className={styles.layout}>
                 <div className={styles.icon}>
-                    <Image src="/myicon.png" width={300} height={300} className={styles.circle}/>
+                    <Image src={`${process.env.PUBLIC_URL}/myicon.png`} width={300} height={300} className={styles.circle}/>
                     <div className={styles.text}>sugar</div>
                     <div>
                         <a href="https://twitter.com/sugar235711">
