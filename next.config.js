@@ -4,5 +4,8 @@ module.exports = {
       path: "",
     },
     assetPrefix: process.env.URL_PREFIX ? '/' + process.env.URL_PREFIX : '',
-    trailingSlash: true
+    trailingSlash: true,
+    publicRuntimeConfig: {
+      basePath: process.env.NODE_ENV === "production" ? "/PROJECT_NAME" : "",
+    },
 };
