@@ -1,0 +1,79 @@
+.wrapper {
+    text-align: center;
+    min-height: 100vh;
+    margin-right: 30px;
+}
+
+.layout {
+    display: grid;
+
+    grid-template-areas:
+        /* " .....  .....  .....    ....."
+        " .....  icon   profile  .....  "
+        " .....  icon   profile  .....  "
+        ".....  .....  .....    ....."; */
+        "icon   profile" ;
+        grid-template-columns: 1fr 1.5fr;
+        gap: 10px;
+    
+    /* justify-content: center; */
+    margin-top: 30px;
+}
+
+.text{
+    font-size: 24px;
+}
+
+.icon {
+    grid-area: icon;
+    height: 100%;
+    /* text-align: center; */
+}
+
+.profile {
+    grid-area: profile;
+    height: 100%;
+    /* text-align: center; */
+    font-size: 24px;
+    align-items: center;
+    white-space: pre-wrap;
+}
+
+.profile_c {
+    padding: 10px;
+    text-align: left;
+    font-size: 20px;
+    margin-bottom: 30px;
+    
+}
+.circle {
+    border-radius: 9999px;
+    margin: 10px;
+}
+
+.img {
+    width: 500px;
+}
+
+.corp {
+    display: grid;
+    grid-template-areas:
+    "corpicon   corptext" ;
+    grid-template-columns: 1fr 3fr;
+    margin: 20px
+}
+
+.corpicon {
+    grid-area: corpicon;
+    /* border-radius: 9999px; */
+    object-fit: contain
+}
+
+.corptext {
+    grid-area: corptext;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    white-space: pre-wrap;
+}
