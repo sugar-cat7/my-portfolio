@@ -4,6 +4,10 @@
     margin-right: 30px;
 }
 
+.spacer {
+    margin: 10px;
+}
+
 .layout {
     display: grid;
 

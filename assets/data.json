@@ -1,5 +1,5 @@
 {
-    "profile": ["どこかの大学院で研究しながら過ごしてます。趣味はアニメ見たりテニスをしたりすることです！\n 研究,競プロでPython インターンでReactを書いてます！フルスタックなエンジニアを目指して日々勉強中です。"],
+    "profile": ["どこかの大学院で研究しながら過ごしてます。趣味はアニメ見たりテニスをすることです！\n 研究,競プロでPython インターンでReactを書いてます！フルスタックなエンジニアを目指して日々勉強中です。"],
     "datalist":[{"id":0, "image":"/howtv.png","term":"2020年9月~2020年9月", "skill":"React"},
                 {"id":1, "image":"/works.jpg",  "term":"2020年12月~2021年1月", "skill":"Java, OracleSQL"},
                 {"id":2, "image":"/stadium.jpg", "term":"2021年4月~", "skill":"React, Go"}
