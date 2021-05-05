@@ -24,23 +24,23 @@ export const AboutMe: React.FunctionComponent = () => {
             <h1>About me</h1>
             <div className={styles.layout}>
                 <div className={styles.icon}>
-                    <Image src="/myicon.png" width={300} height={300} className={styles.circle}/>
+                    <Image src="/images/myicon.png" width={300} height={300} className={styles.circle}/>
                     <div className={styles.text}>sugar</div>
                     <div>
                         <a href="https://twitter.com/sugar235711">
-                            <Image src="/twitter.png" width={50} height={50} className={styles.circle}/>
+                            <Image src="/images/twitter.png" width={50} height={50} className={styles.circle}/>
                         </a>
                         <span className={styles.spacer}/>            
                         <a href="https://github.com/toshikingggg">
-                        <Image src="/github.png" width={50} height={50} className={styles.circle}/>
+                        <Image src="/images/github.png" width={50} height={50} className={styles.circle}/>
                         </a>
                     </div>
                 </div>
-                <div className={styles.profile}>
                     <div className={styles.spacer}/>
+                <div className={styles.profile}>
                     <Paper elevation={3} className={styles.profile_c}>{corpdatas.profile}</Paper>
                     <div>使用可能な技術</div>
-                    <Image src="p_icon.png" width={500} height={150}/>
+                    <Image src="/images/p_icon.png" width={500} height={150}/>
                 </div>            
             </div>
             <h1>Career</h1>
@@ -49,7 +49,7 @@ export const AboutMe: React.FunctionComponent = () => {
                     <>
                         <div className={styles.corp}>
                             <div>
-                                <Image src= {corpdata.image} width={120} height={120} className={styles.corpicon}/>
+                                <Image src={`/images${corpdata.image}`} width={120} height={120} className={styles.corpicon}/>
                                 <div>{corpdata.term}</div>
                             </div>
                             <Paper elevation={3} className={styles.corptext}>
