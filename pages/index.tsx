@@ -5,7 +5,7 @@ import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import { Layout } from '../components/Layout';
 import styles from '../styles/Home.module.css';
 import AboutMe from '../components/About';
-import Career from '../components/Career';
+// import Career from '../components/Career';
 
 const Home: React.FunctionComponent = () => {
   const config = {
