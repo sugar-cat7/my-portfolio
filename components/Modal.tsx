@@ -30,7 +30,8 @@ const Modal: React.FunctionComponent<Props> = ({ handleClose, open }) => {
         `メールアドレス: ${email}\n` +
         `【問い合わせ内容】\n${description}`,
     };
-    const URL = process.env.SLACK_URL;
+    const URL: string = process.env.SLACK_URL!;
+
     fetch(URL, {
       method: 'POST',
       body: JSON.stringify(payload),
