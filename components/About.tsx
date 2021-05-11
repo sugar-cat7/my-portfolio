@@ -29,8 +29,6 @@ const AboutMe: React.FunctionComponent = () => {
     setOpen(false);
   };
 
-  // const url =  `${process.env.PUBLIC_URL}`
-  // // console.log(url)
   return (
     <>
       <h1 className={styles.toptitle}>About me</h1>

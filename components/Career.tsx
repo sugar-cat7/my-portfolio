@@ -18,8 +18,6 @@ const corpdatas = dataset;
 const Career: React.FunctionComponent = () => {
   const classes = useStyles();
 
-  // const url =  `${process.env.PUBLIC_URL}`
-  // // console.log(url)
   return (
     <>
       <h1 className={styles.toptitle}>Career</h1>

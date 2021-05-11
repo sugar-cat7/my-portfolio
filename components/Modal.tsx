@@ -15,11 +15,6 @@ type Props = {
 };
 
 const Modal: React.FunctionComponent<Props> = ({ handleClose, open }) => {
-  //   const { handleSubmit, control } = useForm();
-
-  //   const onSubmit = (data) => {
-  //     console.log(data);
-  //   };
   const [name, setName] = React.useState<string>('');
   const [email, setEmail] = React.useState('');
   const [description, setDescription] = React.useState('');
