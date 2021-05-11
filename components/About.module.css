@@ -1,21 +1,9 @@
 .wrapper {
-    /* display: flex; */
     text-align: center;
     min-height: 100vh;
     margin-right: 30px;
-    align-items: center;
 }
 
-.wrappercareer {
-    text-align: center;
-    min-height: 100vh;
-    margin-right: 30px;
-    align-items: center;
-}
-
-.toptitle{
-    text-align: center;
-}
 .spacer {
     margin: 10px;
 }
