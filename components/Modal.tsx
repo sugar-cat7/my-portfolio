@@ -30,8 +30,8 @@ const Modal: React.FunctionComponent<Props> = ({ handleClose, open }) => {
         `メールアドレス: ${email}\n` +
         `【問い合わせ内容】\n${description}`,
     };
-    const url = process.env.URL;
-    fetch(url, {
+    const { URL } = process.env;
+    fetch(URL, {
       method: 'POST',
       body: JSON.stringify(payload),
     }).then(() => {
