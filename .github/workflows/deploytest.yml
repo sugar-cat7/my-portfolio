@@ -21,15 +21,12 @@ jobs:
       - name: Install NPM packages
         run: npm ci
 
-      - name: env setting
-        env:
-          URL: ${{ secrets.URL }}
-
       - name: Build Next.js app
         run: npm run build
+        with:
+          URL: ${{ secrets.URL }}
         env:
           URL_PREFIX: my-portfolio
-          URL: ${{ secrets.URL }}
 
       - name: Export Next.js app
         run: npm run export
