@@ -21,6 +21,10 @@ jobs:
       - name: Install NPM packages
         run: npm ci
 
+      - name: env setting
+        env:
+          URL: ${{ secrets.URL }}
+
       - name: Build Next.js app
         run: npm run build
         env:
