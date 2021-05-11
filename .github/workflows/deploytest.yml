@@ -9,6 +9,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      URL: ${{ secrets.URL }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -23,8 +25,6 @@ jobs:
 
       - name: Build Next.js app
         run: npm run build
-        with:
-          URL: ${{ secrets.URL }}
         env:
           URL_PREFIX: my-portfolio
 
