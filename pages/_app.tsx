@@ -1,8 +1,13 @@
-import '../styles/globals.css'
-import {AppProps} from "next/app";
+import '../styles/globals.css';
+import { AppProps } from 'next/app';
+import { AnimateSharedLayout } from 'framer-motion';
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <AnimateSharedLayout>
+      <Component {...pageProps} />
+    </AnimateSharedLayout>
+  );
 }
 
-export default MyApp
+export default MyApp;
