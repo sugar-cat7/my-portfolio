@@ -25,6 +25,7 @@ jobs:
         run: npm run build
         env:
           URL_PREFIX: my-portfolio
+          URL: ${{ secrets.URL }}
 
       - name: Export Next.js app
         run: npm run export
