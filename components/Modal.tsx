@@ -18,14 +18,14 @@ const Modal: React.FunctionComponent<Props> = ({ handleClose, open }) => {
   const [name, setName] = React.useState<string>('');
   const [email, setEmail] = React.useState('');
   const [description, setDescription] = React.useState('');
-  const submitForm = () => {
+  const submitForm = async () => {
     const payload = {
       text:
         `${'お問い合わせがありました\n' + 'お名前: '}${name}\n` +
         `メールアドレス: ${email}\n` +
         `【問い合わせ内容】\n${description}`,
     };
-    const URL: string = process.env.SLACK_URL!;
+    const URL: string = await process.env.SLACK_URL!;
 
     fetch(URL, {
       method: 'POST',
