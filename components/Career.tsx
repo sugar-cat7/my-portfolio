@@ -2,8 +2,10 @@ import Image from 'next/image';
 import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
+import React from 'react';
 import styles from './About.module.css';
 import dataset from '../assets/data.json';
+import Modal from './Modal';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -17,6 +19,16 @@ const corpdatas = dataset;
 
 const Career: React.FunctionComponent = () => {
   const classes = useStyles();
+
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   return (
     <>
@@ -40,14 +52,17 @@ const Career: React.FunctionComponent = () => {
             </div>
           </>
         ))}
+        <div className={styles.spacer} />
         <Button
           variant="outlined"
           color="primary"
           className={classes.button}
           size="large"
+          onClick={handleClickOpen}
         >
           お問い合わせ
         </Button>
+        <Modal open={open} handleClose={handleClose} />
       </div>
     </>
   );
