@@ -5,22 +5,22 @@ import Typography from '@material-ui/core/Typography';
 
 const images = [
   {
-    url: '/images/dev_exp/chatbot.png',
+    url: '../public/images/dev_exp/chatbot.png',
     title: 'チャットボット',
     width: '20%',
   },
   {
-    url: '/images/dev_exp/linebot.png',
+    url: '../public/images/dev_exp/linebot.png',
     title: 'LINEのオート通知',
     width: '20%',
   },
   {
-    url: '/images/dev_exp/portfolio.png',
+    url: '../public/images/dev_exp/portfolio.png',
     title: 'ポートフォリオ',
     width: '30%',
   },
   {
-    url: '/images/dev_exp/opencv.png',
+    url: '../public/images/dev_exp/opencv.png',
     title: '流量計測用画像処理プログラム',
     width: '30%',
   },
