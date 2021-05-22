@@ -15,7 +15,6 @@
     "@emotion/styled": "^11.3.0",
     "@material-ui/core": "4.11.2",
     "@material-ui/icons": "^4.11.2",
-    "@slack/webhook": "^6.0.0",
     "@types/node": "^15.0.1",
     "@types/react": "^17.0.4",
     "framer-motion": "^4.1.13",
