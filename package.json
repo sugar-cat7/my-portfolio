@@ -63,5 +63,6 @@
     "{public,src}/**/*.{html,gql,graphql,json}": [
       "prettier --write --loglevel=error"
     ]
-  }
+  },
+  "homepage": "https://toshikingggg.github.io/my-portfolio"
 }
