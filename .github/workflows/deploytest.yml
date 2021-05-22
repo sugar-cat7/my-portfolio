@@ -15,7 +15,8 @@ jobs:
 
       - name: Set the value
         run: |
-          echo "SLACK_URL=${{ secrets.SLACK_URL }}" >> $GITHUB_ENV
+          touch .env
+          echo SLACK_URL=${{ secrets.SLACK_URL }} >> .env
 
       - name: Setup Node.js
         uses: actions/setup-node@v2
