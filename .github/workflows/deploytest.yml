@@ -12,8 +12,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-        
-        - name: Set the value
+
+      - name: Set the value
           run: |
             echo "SLACK_URL=${{ secrets.SLACK_URL }}" >> $GITHUB_ENV
 
