@@ -6,9 +6,6 @@ on:
   pull_request:
     branches: [ main ]
 
-env:
-  SLACK_URL: ${{ secrets.URL }}
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -28,6 +25,7 @@ jobs:
         run: npm run build
         env:
           URL_PREFIX: my-portfolio
+          SLACK_URL: ${{ secrets.SLACK_URL }}
 
       - name: Export Next.js app
         run: npm run export
