@@ -25,8 +25,9 @@ const Modal: React.FunctionComponent<Props> = ({ handleClose, open }) => {
         `メールアドレス: ${email}\n` +
         `【問い合わせ内容】\n${description}`,
     };
+    const URL: string = process.env.SLACK_URL!;
 
-    await fetch('/api/inquirelyform', {
+    await fetch(URL, {
       method: 'POST',
       body: JSON.stringify(payload),
     }).then(() => {
