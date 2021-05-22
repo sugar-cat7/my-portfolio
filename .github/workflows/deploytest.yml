@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 env:
-  SLACK_URL: ${{ secrets.URL }}
+  SLACK_URL: ${{ secrets.SLACK_URL }}
 
 jobs:
   build:
