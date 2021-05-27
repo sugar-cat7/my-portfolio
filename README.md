@@ -15,3 +15,4 @@ https://toshikingggg.github.io/my-portfolio/
 - [x] 表示前にアニメーションをつける
 - [ ] モバイル対応
 - [ ] 開発経験の追加
+- [ ] post api修正
