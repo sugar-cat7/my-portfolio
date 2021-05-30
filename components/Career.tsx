@@ -18,48 +18,47 @@ const useStyles = makeStyles((theme: Theme) =>
 
 const corpdatas = dataset;
 
-const Career: React.FunctionComponent = () => {
-  const classes = useStyles();
+const Career: React.FunctionComponent = () => (
+  // const classes = useStyles();
 
-  const [open, setOpen] = React.useState(false);
+  // const [open, setOpen] = React.useState(false);
 
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
+  // const handleClickOpen = () => {
+  //   setOpen(true);
+  // };
 
-  const handleClose = () => {
-    setOpen(false);
-  };
+  // const handleClose = () => {
+  //   setOpen(false);
+  // };
 
-  return (
-    <>
-      <h1 className={styles.toptitle}>Career</h1>
-      <div className={styles.wrappercareer} id="section2">
-        {corpdatas.datalist.map((corpdata) => (
-          <>
-            <div className={styles.corp}>
-              <div>
-                <Image
-                  src={`/images${corpdata.image}`}
-                  width={120}
-                  height={120}
-                  className={styles.corpicon}
-                />
-                <div>{corpdata.term}</div>
-              </div>
-              <Paper elevation={3} className={styles.corptext}>
-                {corpdatas.text[corpdata.id]}({corpdata.skill})
-              </Paper>
+  <>
+    <h1 className={styles.toptitle}>Career</h1>
+    <div className={styles.wrappercareer} id="section2">
+      {corpdatas.datalist.map((corpdata) => (
+        <>
+          <div className={styles.corp}>
+            <div>
+              <Image
+                src={`/images${corpdata.image}`}
+                width={120}
+                height={120}
+                className={styles.corpicon}
+              />
+              <div>{corpdata.term}</div>
             </div>
-          </>
-        ))}
-        <div className={styles.spacer_bottom} />
-        <p>Contact</p>
-        <EmailIcon fontSize="large" />
-        <div>
-          <span className={styles.line}>sugar.king.contact@gmail.com</span>
-        </div>
-        {/* <Button
+            <Paper elevation={3} className={styles.corptext}>
+              {corpdatas.text[corpdata.id]}({corpdata.skill})
+            </Paper>
+          </div>
+        </>
+      ))}
+      <div className={styles.spacer_bottom} />
+      <p>Contact</p>
+      <EmailIcon fontSize="large" />
+      <div>
+        <span className={styles.line}>sugar.king.contact@gmail.com</span>
+      </div>
+      {/* <Button
           variant="outlined"
           color="primary"
           className={classes.button}
@@ -69,9 +68,7 @@ const Career: React.FunctionComponent = () => {
           お問い合わせ
         </Button>
         <Modal open={open} handleClose={handleClose} /> */}
-      </div>
-    </>
-  );
-};
-
+    </div>
+  </>
+);
 export default Career;
