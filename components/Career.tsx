@@ -1,11 +1,12 @@
 import Image from 'next/image';
 import Paper from '@material-ui/core/Paper';
-import Button from '@material-ui/core/Button';
+// import Button from '@material-ui/core/Button';
+import EmailIcon from '@material-ui/icons/Email';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import React from 'react';
 import styles from './About.module.css';
 import dataset from '../assets/data.json';
-import Modal from './Modal';
+// import Modal from './Modal';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -52,8 +53,13 @@ const Career: React.FunctionComponent = () => {
             </div>
           </>
         ))}
-        <div className={styles.spacer} />
-        <Button
+        <div className={styles.spacer_bottom} />
+        <p>Contact</p>
+        <EmailIcon fontSize="large" />
+        <div>
+          <span className={styles.line}>sugar.king.contact@gmail.com</span>
+        </div>
+        {/* <Button
           variant="outlined"
           color="primary"
           className={classes.button}
@@ -62,7 +68,7 @@ const Career: React.FunctionComponent = () => {
         >
           お問い合わせ
         </Button>
-        <Modal open={open} handleClose={handleClose} />
+        <Modal open={open} handleClose={handleClose} /> */}
       </div>
     </>
   );
