@@ -26,10 +26,13 @@ const Modal: React.FunctionComponent<Props> = ({ handleClose, open }) => {
         `【問い合わせ内容】\n${description}`,
     };
 
-    await fetch('/api/inquirelyform', {
-      method: 'POST',
-      body: JSON.stringify(payload),
-    }).then(() => {
+    await fetch(
+      'https://hooks.slack.com/services/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',
+      {
+        method: 'POST',
+        body: JSON.stringify(payload),
+      },
+    ).then(() => {
       alert('送信が完了しました、追ってご連絡します');
       setName('');
       setEmail('');
