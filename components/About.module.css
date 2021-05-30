@@ -21,6 +21,10 @@
     margin: 10px;
 }
 
+.spacer_bottom {
+    margin-bottom: 50px;
+}
+
 .layout {
     display: grid;
 
@@ -97,4 +101,7 @@
 
 .devtitle {
     font-size: 24px;
+}
+.line {
+    border-bottom: 2px solid black;
 }
