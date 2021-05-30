@@ -14,5 +14,5 @@ https://toshikingggg.github.io/my-portfolio/
 - [ ] コンポーネントの分け方が雑なので修正
 - [x] 表示前にアニメーションをつける
 - [ ] モバイル対応
-- [ ] 開発経験の追加
-- [ ] post api修正
+- [x] 開発経験の追加
+- [ ] headlessCMSでコンテンツ管理するようにする
