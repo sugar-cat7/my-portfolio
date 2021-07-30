@@ -1,107 +1,151 @@
-.wrapper {
-    /* display: flex; */
-    text-align: center;
-    min-height: 100vh;
-    margin-right: 35px;
-    margin-left: 35px;
-    align-items: center;
-}
-
 .wrappercareer {
-    text-align: center;
-    min-height: 100%;
-    /* margin-right: 30px; */
-    align-items: center;
+  text-align: center;
+  min-height: 100%;
+  /* margin-right: 30px; */
+  align-items: center;
 }
 
-.toptitle{
-    text-align: center;
+.toptitle {
+  text-align: center;
 }
 .spacer {
-    margin: 10px;
+  margin: 10px;
+}
+
+.buttonspacer {
+  margin-top: 50px;
 }
 
 .spacer_bottom {
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 }
-
-.layout {
-    display: grid;
-
-    grid-template-areas:
-        /* " .....  .....  .....    ....."
-        " .....  icon   profile  .....  "
-        " .....  icon   profile  .....  "
-        ".....  .....  .....    ....."; */
-        "icon   profile" ;
-        grid-template-columns: 1fr 1.5fr;
-        gap: 10px;
-    
-    /* justify-content: center; */
-    margin-top: 30px;
+.profiletext {
+  font-size: 24px;
+  color: grey;
+  font-family: 'Times New Roman', Times, serif;
+  margin-bottom: 16px;
+  /* width: 650px; */
 }
-
-.text{
-    font-size: 24px;
+.text {
+  font-size: 16px;
+  color: grey;
+  font-family: 'Times New Roman', Times, serif;
+  margin-bottom: 8px;
+}
+.wrapper {
+  /* height: 100vh; */
+  /* display: flex; */
+  /* padding-top: 10%; */
+  /* margin-top: 120px; */
+  justify-content: center;
+  align-items: center;
 }
 
 .icon {
-    grid-area: icon;
-    height: 100%;
-    /* text-align: center; */
+  grid-area: icon;
+  height: 100%;
+  text-align: center;
 }
 
 .profile {
-    grid-area: profile;
-    height: 100%;
-    /* text-align: center; */
-    font-size: 24px;
-    align-items: center;
-    white-space: pre-wrap;
+  grid-area: profile;
+  white-space: pre-wrap;
+  margin: auto 0;
+  /* text-align: center; */
 }
 
 .profile_c {
-    padding: 10px;
-    text-align: left;
-    font-size: 20px;
-    margin-bottom: 30px;
-    
+  padding: 10px;
+  text-align: left;
 }
+
 .circle {
-    border-radius: 9999px;
-    margin: 10px;
+  border-radius: 9999px;
 }
 
-.img {
-    width: 500px;
+.icons {
+  margin-bottom: 16px;
 }
 
-.corp {
+.btnCircleBorderSimple {
+  background: gray;
+  color: #fff;
+  border: none;
+  position: relative;
+  height: 60px;
+  width: 240px;
+  font-size: 1.6em;
+  padding: 0 2em;
+  cursor: pointer;
+  transition: 800ms ease all;
+  outline: none;
+}
+.btnCircleBorderSimple:hover {
+  background: #fff;
+  color: gray;
+}
+.btnCircleBorderSimple:before,
+.btnCircleBorderSimple:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2px;
+  width: 0;
+  background: gray;
+  transition: 400ms ease all;
+}
+.btnCircleBorderSimple:after {
+  right: inherit;
+  top: inherit;
+  left: 0;
+  bottom: 0;
+}
+.btnCircleBorderSimple:hover:before,
+.btnCircleBorderSimple:hover:after {
+  width: 100%;
+  transition: 800ms ease all;
+}
+
+.buttons {
+  /* display: inline-flex; */
+  /* justify-content: center; */
+  margin: 40px 0;
+}
+
+@media screen and (min-width: 900px) {
+  .wrapper {
+    margin-top: 120px;
+    height: 100vh;
+  }
+  .container {
     display: grid;
-    grid-template-areas:
-    "corpicon   corptext" ;
-    grid-template-columns: 1fr 3fr;
-    margin: 20px
-}
-
-.corpicon {
-    grid-area: corpicon;
-    /* border-radius: 9999px; */
-    object-fit: contain
-}
-
-.corptext {
-    grid-area: corptext;
+    grid-template-areas: 'icon   profile';
+    grid-template-columns: 1fr 1.5fr;
+    margin-top: 72px;
+    margin-bottom: 72px;
+  }
+  .profiletext {
+    width: 650px;
+    font-size: 32px;
+  }
+  .profile_c {
+    width: 650px;
+  }
+  .buttons {
+    display: inline-flex;
+  }
+  .buttonspacer {
+    margin: 0 50px;
+  }
+  .text {
     font-size: 24px;
-    display: flex;
-    align-items: center;
-    padding: 30px;
-    white-space: pre-wrap;
+  }
 }
 
-.devtitle {
-    font-size: 24px;
-}
-.line {
-    border-bottom: 2px solid black;
+@media screen and (max-width: 770px) {
+  .profile_c {
+    width: 80%;
+    margin: 0 auto;
+  }
 }

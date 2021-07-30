@@ -4,7 +4,7 @@ import Paper from '@material-ui/core/Paper';
 import EmailIcon from '@material-ui/icons/Email';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import React from 'react';
-import styles from './About.module.css';
+import styles from './Career.module.css';
 import dataset from '../assets/data.json';
 // import Modal from './Modal';
 
@@ -19,35 +19,26 @@ const useStyles = makeStyles((theme: Theme) =>
 const corpdatas = dataset;
 
 const Career: React.FunctionComponent = () => (
-  // const classes = useStyles();
-
-  // const [open, setOpen] = React.useState(false);
-
-  // const handleClickOpen = () => {
-  //   setOpen(true);
-  // };
-
-  // const handleClose = () => {
-  //   setOpen(false);
-  // };
-
   <>
-    <h1 className={styles.toptitle}>Career</h1>
+    {/* <h1 className={styles.toptitle}>Career</h1> */}
     <div className={styles.wrappercareer} id="section2">
+      <div className={styles.jobtext}>Part-time Job</div>
       {corpdatas.datalist.map((corpdata) => (
         <>
           <div className={styles.corp}>
-            <div>
+            <div className={styles.corpspacer}>
               <Image
                 src={`/images${corpdata.image}`}
-                width={120}
-                height={120}
+                width={150}
+                height={70}
                 className={styles.corpicon}
               />
               <div>{corpdata.term}</div>
             </div>
             <Paper elevation={3} className={styles.corptext}>
-              {corpdatas.text[corpdata.id]}({corpdata.skill})
+              <div className={styles.text}>
+                {corpdatas.text[corpdata.id]} ({corpdata.skill})
+              </div>
             </Paper>
           </div>
         </>
@@ -58,16 +49,6 @@ const Career: React.FunctionComponent = () => (
       <div>
         <span className={styles.line}>sugar.king.contact@gmail.com</span>
       </div>
-      {/* <Button
-          variant="outlined"
-          color="primary"
-          className={classes.button}
-          size="large"
-          onClick={handleClickOpen}
-        >
-          お問い合わせ
-        </Button>
-        <Modal open={open} handleClose={handleClose} /> */}
     </div>
   </>
 );
