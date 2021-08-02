@@ -26,5 +26,45 @@
     "外資就活ドットコムの新機能開発",
     "不動産会計の機能開発業務",
     "インタビューメーカーの機能開発"
+  ],
+  "devEx": [
+    {
+      "id": 0,
+      "url": "/images/dev_exp/keiro.png",
+      "title": "かんたん経路くん",
+      "skill": ["Next.js", "Firebase", "LINE API"],
+      "link": {
+        "GitHub": "https://github.com/toshikingggg/MobilityApp",
+        "Blog": "https://sugarking.hatenablog.com/entry/2021/07/26/200000",
+        "Hackathon": "https://nyle-hack.com/"
+      }
+    },
+    {
+      "id": 1,
+      "url": "/images/dev_exp/opencv.png",
+      "title": "研究",
+      "skill": ["Python", "OpenCV", "Numba"],
+      "link": {
+        "GitHub": "https://github.com/toshikingggg/lab"
+      }
+    },
+    {
+      "id": 2,
+      "url": "/images/dev_exp/portfolio.png",
+      "title": "ポートフォリオ",
+      "skill": ["TypeScript/React", "Python", "Golang"],
+      "link": {
+        "GitHub": "https://github.com/toshikingggg/my-portfolio"
+      }
+    },
+    {
+      "id": 3,
+      "url": "/images/github.png",
+      "title": "その他",
+      "skill": ["TypeScript/React", "Python", "Golang"],
+      "link": {
+        "GitHub": "https://github.com/toshikingggg"
+      }
+    }
   ]
 }

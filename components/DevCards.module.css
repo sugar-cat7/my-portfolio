@@ -1,0 +1,42 @@
+.cardtext {
+  color: gray;
+  border: solid 1.5px rgba(0, 17, 93, 0.76);
+  border-radius: 9999px;
+  padding: 3px;
+  margin: 6px;
+  font-size: 12px;
+}
+.container {
+  /* height: 100vh; */
+}
+.wrapper {
+  /* margin-left: 100px; */
+  text-align: center;
+  /* margin-right: 30px; */
+  align-items: center;
+}
+
+.wrapperInner {
+  margin: 20px;
+}
+.text {
+  font-size: 24px;
+  color: grey;
+  font-family: 'Times New Roman', Times, serif;
+  margin-bottom: 16px;
+  /* width: 650px; */
+}
+.cardmedia {
+  height: '400';
+  width: '300';
+}
+@media screen and (min-width: 900px) {
+  .wrapper {
+    display: flex;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+  .text {
+    font-size: 32px;
+  }
+}

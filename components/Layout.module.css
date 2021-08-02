@@ -1,5 +1,10 @@
 .container {
-  /* background-color: blue; */
   text-align: center;
   padding: 30px;
+}
+
+@media screen and (max-width: 900px) and (min-width: 768px) {
+  .container {
+    margin: 0 50px;
+  }
 }

@@ -1,16 +1,18 @@
 import Head from 'next/head';
 import { motion, useMotionValue, useTransform } from 'framer-motion';
-import { Link, animateScroll as scroll } from 'react-scroll';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import Layout from '../components/Layout';
 import styles from '../styles/Home.module.css';
 import AboutMe from '../components/About';
+import DevCards from '../components/DevCards';
 import Career from '../components/Career';
-
+import Link from 'next/link';
 const Home: React.FunctionComponent = () => (
   <>
     <Layout>
       <AboutMe />
+      <div className={styles.spacer} />
+      <DevCards />
       <div className={styles.spacer} />
       <Career />
       <div className={styles.spacer} />
