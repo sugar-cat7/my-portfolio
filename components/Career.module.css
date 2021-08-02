@@ -20,7 +20,7 @@
 }
 
 .corp {
-  margin-bottom: 16px;
+  /* margin-bottom: 16px; */
 }
 .corpspacer {
   margin-bottom: 16px;
@@ -37,7 +37,7 @@
 @media screen and (min-width: 900px) {
   .wrappercareer {
     margin-top: 100px;
-    height: 100vh;
+    height: 100%;
 
     /* margin: 0 auto; */
   }
@@ -52,10 +52,10 @@
     grid-template-areas: 'corpicon   corptext';
     grid-template-columns: 1fr 3fr;
     margin: 20px;
-    /* text-align: center;
-    justify-content: center; */
-    margin-left: 200px;
-
+    text-align: center;
+    justify-content: center;
+    /* margin-left: 200px; */
+    /* align-items: center; */
     /* margin: 0 auto; */
   }
 
@@ -63,6 +63,9 @@
     grid-area: corpicon;
     /* border-radius: 9999px; */
     object-fit: contain;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
   }
 
   .corptext {
@@ -80,5 +83,11 @@
   .corptext {
     width: 80%;
     margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .corp {
+    margin-left: 200px;
   }
 }
