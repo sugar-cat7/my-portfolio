@@ -7,7 +7,8 @@ import dataset from '../assets/data.json';
 import DevExperience from './DevExperimence';
 
 const corpdatas = dataset;
-const iconsize = 40;
+const profImg = dataset.profileImage;
+const iconsize = 30;
 const AboutMe: React.FunctionComponent = () => (
   <>
     {/* <h1 className={styles.toptitle}>About me</h1> */}
@@ -20,9 +21,23 @@ const AboutMe: React.FunctionComponent = () => (
             height={200}
             className={styles.circle}
           />
-          <div className={styles.text}>toshikingggg/sugar</div>
+          <div className={styles.text}>sugar</div>
           <div className={styles.icons}>
-            <a href="https://twitter.com/sugar235711">
+            <span className={styles.spacer} />
+            {profImg.map((i) => (
+              <>
+                <a href={i.srcurl}>
+                  <Image
+                    src={i.imgurl}
+                    width={iconsize}
+                    height={iconsize}
+                    className={styles.circle}
+                  />
+                </a>
+                <span className={styles.spacer} />
+              </>
+            ))}
+            {/* <a href="https://twitter.com/sugar235711">
               <Image
                 src="/images/twitter.png"
                 width={iconsize}
@@ -47,7 +62,7 @@ const AboutMe: React.FunctionComponent = () => (
                 height={iconsize}
                 className={styles.circle}
               />
-            </a>
+            </a> */}
           </div>
         </div>
         <div className={styles.profile}>
