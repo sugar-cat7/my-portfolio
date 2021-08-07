@@ -21,7 +21,7 @@ const corpdatas = dataset;
 const Career: React.FunctionComponent = () => (
   <>
     {/* <h1 className={styles.toptitle}>Career</h1> */}
-    <div className={styles.wrappercareer} id="section2">
+    {/* <div className={styles.wrappercareer} id="section2">
       <div className={styles.jobtext}>Part-time Job</div>
       {corpdatas.datalist.map((corpdata) => (
         <>
@@ -49,7 +49,57 @@ const Career: React.FunctionComponent = () => (
       <div>
         <span className={styles.line}>sugar.king.contact@gmail.com</span>
       </div>
+    </div> */}
+    <div className={styles.jobtext} id="section2">
+      Part-time Job
     </div>
+    <section id="conference-timeline">
+      {/* <div className="timeline-start"></div> */}
+      {corpdatas.datalist.map((corpdata) => (
+        <>
+          <div className="conference-center-line"></div>
+          <div className="conference-timeline-content">
+            <div className="timeline-article">
+              {corpdata.id % 2 != 0 && (
+                <>
+                  <div className="content-left-container">
+                    {corpdata.name}
+                    <div className="content-left">
+                      <div>
+                        {corpdatas.text[corpdata.id - 1]}
+                        <div>({corpdata.skill})</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="meta-date">
+                    <span className="date">{corpdata.term}</span>
+                    <span className="month">{corpdata.season}</span>
+                  </div>
+                </>
+              )}
+              {corpdata.id % 2 == 0 && (
+                <>
+                  <div className="content-right-container">
+                    {corpdata.name}
+                    <div className="content-right">
+                      <div>
+                        {corpdatas.text[corpdata.id - 1]}
+                        <div>({corpdata.skill})</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="meta-date">
+                    <span className="date">{corpdata.term}</span>
+                    <span className="month">{corpdata.season}</span>
+                  </div>
+                </>
+              )}
+            </div>
+          </div>
+        </>
+      ))}
+      {/* <div className="timeline-end"></div> */}
+    </section>
   </>
 );
 export default Career;

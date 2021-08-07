@@ -12,7 +12,7 @@ const iconsize = 30;
 const AboutMe: React.FunctionComponent = () => (
   <>
     {/* <h1 className={styles.toptitle}>About me</h1> */}
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} id="section0">
       <div className={styles.container}>
         <div className={styles.icon}>
           <Image
@@ -78,7 +78,7 @@ const AboutMe: React.FunctionComponent = () => (
       </div>
       {/* <p className={styles.devtitle}>作ったもの(個人)</p>
       <DevExperience /> */}
-      <div className={styles.buttons}>
+      {/* <div className={styles.buttons}>
         <Link
           activeClass="active"
           to="section1"
@@ -104,7 +104,7 @@ const AboutMe: React.FunctionComponent = () => (
             <span>career</span>
           </button>
         </Link>
-      </div>
+      </div> */}
     </div>
   </>
 );

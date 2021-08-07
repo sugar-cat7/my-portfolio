@@ -1,6 +1,6 @@
 {
   "profile": [
-    "量産型の大学院生やってます. 専門は画像処理, 光工学\n趣味: テニス, アニメ鑑賞\nアルバイト: ソフトウェアエンジニア(Golang/TypeScript)"
+    "大学院生やってます. 専門は画像処理, 光工学\n趣味: テニス, アニメ鑑賞\nアルバイト: ソフトウェアエンジニア(Golang/TypeScript)"
   ],
   "profileImage": [
     {
@@ -22,21 +22,27 @@
   ],
   "datalist": [
     {
-      "id": 0,
+      "id": 1,
+      "name": "Howtelevision, Inc.",
       "image": "/howtv.png",
-      "term": "2020年9月~2020年9月",
+      "term": "2020",
+      "season": "1month",
       "skill": "React"
     },
     {
-      "id": 1,
+      "id": 2,
+      "name": "Works Applications, Inc.",
       "image": "/works.jpg",
-      "term": "2020年12月~2021年1月",
+      "term": "2021",
+      "season": "winter",
       "skill": "Java"
     },
     {
-      "id": 2,
+      "id": 3,
+      "name": "Stadium, Inc.",
       "image": "/stadium.jpg",
-      "term": "2021年4月~",
+      "term": "2021",
+      "season": "now",
       "skill": "React, Go"
     }
   ],
