@@ -116,8 +116,8 @@
 
 @media screen and (min-width: 900px) {
   .wrapper {
-    margin-top: 120px;
-    height: 100vh;
+    margin-top: 240px;
+    height: 100%;
   }
   .container {
     display: grid;
@@ -148,5 +148,11 @@
   .profile_c {
     width: 80%;
     margin: 0 auto;
+  }
+}
+@media screen and (max-width: 900px) {
+  .wrapper {
+    margin-top: 160px;
+    height: 100%;
   }
 }

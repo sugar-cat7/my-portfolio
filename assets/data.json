@@ -1,24 +1,48 @@
 {
   "profile": [
-    "量産型の大学院生やってます. 専門は画像処理, 光工学\n趣味: テニス, アニメ鑑賞\nアルバイト: ソフトウェアエンジニア(Golang/TypeScript)"
+    "大学院生やってます. 専門は画像処理, 光工学\n趣味: テニス, アニメ鑑賞\nアルバイト: ソフトウェアエンジニア(Golang/TypeScript)"
+  ],
+  "profileImage": [
+    {
+      "imgurl": "/images/twitter.png",
+      "srcurl": "https://twitter.com/sugar235711"
+    },
+    {
+      "imgurl": "/images/hatena.png",
+      "srcurl": "https://sugarking.hatenablog.com/"
+    },
+    {
+      "imgurl": "/images/qiita.png",
+      "srcurl": "https://qiita.com/sugar_king777"
+    },
+    {
+      "imgurl": "/images/github.png",
+      "srcurl": "https://github.com/toshikingggg"
+    }
   ],
   "datalist": [
     {
-      "id": 0,
+      "id": 1,
+      "name": "Howtelevision, Inc.",
       "image": "/howtv.png",
-      "term": "2020年9月~2020年9月",
+      "term": "2020",
+      "season": "1month",
       "skill": "React"
     },
     {
-      "id": 1,
+      "id": 2,
+      "name": "Works Applications, Inc.",
       "image": "/works.jpg",
-      "term": "2020年12月~2021年1月",
+      "term": "2021",
+      "season": "winter",
       "skill": "Java"
     },
     {
-      "id": 2,
+      "id": 3,
+      "name": "Stadium, Inc.",
       "image": "/stadium.jpg",
-      "term": "2021年4月~",
+      "term": "2021",
+      "season": "now",
       "skill": "React, Go"
     }
   ],
@@ -30,7 +54,7 @@
   "devEx": [
     {
       "id": 0,
-      "url": "/images/dev_exp/keiro.png",
+      "url": "./images/dev_exp/keiro.png",
       "title": "かんたん経路くん",
       "skill": ["Next.js", "Firebase", "LINE API"],
       "link": {
@@ -41,7 +65,7 @@
     },
     {
       "id": 1,
-      "url": "/images/dev_exp/opencv.png",
+      "url": "./images/dev_exp/opencv.png",
       "title": "研究",
       "skill": ["Python", "OpenCV", "Numba"],
       "link": {
@@ -50,16 +74,16 @@
     },
     {
       "id": 2,
-      "url": "/images/dev_exp/portfolio.png",
+      "url": "./images/dev_exp/portfolio.png",
       "title": "ポートフォリオ",
-      "skill": ["TypeScript/React", "Python", "Golang"],
+      "skill": ["TypeScript/Next.js", "GitHubAction"],
       "link": {
         "GitHub": "https://github.com/toshikingggg/my-portfolio"
       }
     },
     {
       "id": 3,
-      "url": "/images/github.png",
+      "url": "./images/github.png",
       "title": "その他",
       "skill": ["TypeScript/React", "Python", "Golang"],
       "link": {

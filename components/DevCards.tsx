@@ -10,9 +10,18 @@ import dataset from '../assets/data.json';
 import styles from './DevCards.module.css';
 const useStyles = makeStyles({
   root: {
-    maxWidth: '300px',
+    width: '300px',
+    height: '400px',
     textAlign: 'center',
     margin: '0 auto',
+  },
+  media: {
+    // height: 0,
+    // paddingTop: '56.25%', // 16:9
+    height: '260px',
+    width: '100%',
+    // alignItems: 'center',
+    textAlign: 'center',
   },
 });
 
@@ -39,18 +48,17 @@ export default function ImgMediaCard() {
   const classes = useStyles();
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="section1">
       <div className={styles.text}>Products</div>
       <div className={styles.wrapper}>
         {devDatas.map((devData: Datas) => (
           <div className={styles.wrapperInner}>
-            <Card className={classes.root} id="section1">
+            <Card className={classes.root}>
               <CardActionArea>
                 <CardMedia
                   component="img"
                   image={devData.url}
-                  height="300px"
-                  width="300px"
+                  className={classes.media}
                 />
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="h2">

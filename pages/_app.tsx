@@ -1,4 +1,5 @@
 import '../styles/globals.css';
+import 'tailwindcss/tailwind.css';
 import { AppProps } from 'next/app';
 import { AnimateSharedLayout } from 'framer-motion';
 
