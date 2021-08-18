@@ -6,34 +6,35 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import dataset from '../assets/data.json';
 import styles from './DevCards.module.css';
+
 const useStyles = makeStyles({
   root: {
-    width: '300px',
-    height: '400px',
+    width: '260px',
+    height: '335px',
     textAlign: 'center',
     margin: '0 auto',
   },
   media: {
-    // height: 0,
-    // paddingTop: '56.25%', // 16:9
-    height: '260px',
+    height: '200px',
     width: '100%',
-    // alignItems: 'center',
     textAlign: 'center',
   },
 });
 
-type Datas = {
-  url: string;
-  title: string;
-  skill: string[];
-  link: {
-    GitHub: string;
-    Blog?: string;
-    Hackathon?: string;
-  };
+type Props = {
+  devEx: {
+    img: {
+      url: string;
+    };
+    title: string;
+    skill: string[];
+    link: {
+      GitHub: string;
+      Blog?: string;
+      Hackathon?: string;
+    };
+  }[];
 };
 
 type Data = {
@@ -42,40 +43,41 @@ type Data = {
   Hackathon?: string;
 };
 
-const devDatas = dataset.devEx;
+// const devDatas = dataset.devEx;
 
-export default function ImgMediaCard() {
+const ImgMediaCard: React.FunctionComponent<Props> = ({ devEx }) => {
   const classes = useStyles();
-
   return (
     <div className={styles.container} id="section1">
       <div className={styles.text}>Products</div>
       <div className={styles.wrapper}>
-        {devDatas.map((devData: Datas) => (
+        {devEx.map((devData) => (
           <div className={styles.wrapperInner}>
             <Card className={classes.root}>
               <CardActionArea>
                 <CardMedia
                   component="img"
-                  image={devData.url}
+                  image={devData.img.url}
                   className={classes.media}
                 />
                 <CardContent>
-                  <Typography gutterBottom variant="h5" component="h2">
+                  <Typography gutterBottom variant="h6" component="h2">
                     {devData.title}
                   </Typography>
-                  {devData.skill.map((d) => (
+                  {devData.skill.map((d: string) => (
                     <span className={styles.cardtext}>{d}</span>
                   ))}
                 </CardContent>
               </CardActionArea>
               <CardActions>
                 {/* {Object.keys(devData.link).map((d: string) => ( */}
-                {(Object.keys(devData.link) as (keyof Data)[]).map((d) => (
-                  <Button size="small" color="primary">
-                    <a href={devData.link[d]}>{d}</a>
-                  </Button>
-                ))}
+                {(Object.keys(devData.link).slice(1) as (keyof Data)[]).map(
+                  (d) => (
+                    <Button size="small" color="primary">
+                      <a href={devData.link[d]}>{d}</a>
+                    </Button>
+                  ),
+                )}
               </CardActions>
             </Card>
           </div>
@@ -83,4 +85,5 @@ export default function ImgMediaCard() {
       </div>
     </div>
   );
-}
+};
+export default ImgMediaCard;

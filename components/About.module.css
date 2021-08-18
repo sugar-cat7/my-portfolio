@@ -127,11 +127,11 @@
     margin-bottom: 72px;
   }
   .profiletext {
-    width: 650px;
+    width: 90%;
     font-size: 32px;
   }
   .profile_c {
-    width: 650px;
+    width: 90%;
   }
   .buttons {
     display: inline-flex;
@@ -152,7 +152,10 @@
 }
 @media screen and (max-width: 900px) {
   .wrapper {
-    margin-top: 160px;
+    padding-top: 160px;
     height: 100%;
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
   }
 }
