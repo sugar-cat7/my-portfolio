@@ -54,7 +54,10 @@ const Layout: React.FunctionComponent = ({ children }) => (
         </div>
       </nav>
     </header>
-    <div className="text-center p-30">{children}</div>
+    <div className="text-center p-30 m-8">{children}</div>
+    <footer className="w-full text-center border-t-2 h-12 p-2">
+      <div> Copyright © 2021 sugar.</div>
+    </footer>
   </>
 );
 

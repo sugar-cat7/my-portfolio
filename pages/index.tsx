@@ -7,20 +7,35 @@ import AboutMe from '../components/About';
 import DevCards from '../components/DevCards';
 import Career from '../components/Career';
 import Link from 'next/link';
-const Home: React.FunctionComponent = () => (
-  <>
-    <Layout>
-      <AboutMe />
-      <div className={styles.spacer} />
-      <DevCards />
-      <div className={styles.spacer} />
-      <Career />
-      <div className={styles.spacer} />
-      <footer className={styles.footer}>
-        <div> Copyright © 2021 sugar.</div>
-      </footer>
-    </Layout>
-  </>
-);
+import useSWR from 'swr';
+import fetch from 'node-fetch';
+
+const Home: React.FunctionComponent = () => {
+  async function fetcher(url: string): Promise<any> {
+    const response = await fetch(url, {
+      headers: { 'x-api-key': `${process.env.NEXT_PUBLIC_API_KEY}` },
+    });
+    return response.json();
+  }
+  const { data } = useSWR(`${process.env.NEXT_PUBLIC_DAILY_API}`, fetcher);
+  if (!data) {
+    return <p>now loding</p>;
+  }
+  const contents = data.contents;
+
+  return (
+    <>
+      <Layout>
+        <AboutMe {...contents[0]} />
+        <div className={styles.spacer} />
+        <Career {...contents[0]} />
+
+        <div className={styles.spacer} />
+        <DevCards {...contents[0]} />
+        <div className={styles.spacer} />
+      </Layout>
+    </>
+  );
+};
 
 export default Home;

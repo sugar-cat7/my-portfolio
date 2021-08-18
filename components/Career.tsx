@@ -5,8 +5,9 @@ import EmailIcon from '@material-ui/icons/Email';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import React from 'react';
 import styles from './Career.module.css';
-import dataset from '../assets/data.json';
 // import Modal from './Modal';
+import Skill from './Skill';
+import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -15,91 +16,52 @@ const useStyles = makeStyles((theme: Theme) =>
     },
   }),
 );
+type Props = {
+  skill: {
+    id: string;
+    skill: string;
+    img: {
+      url: string;
+    };
+    span: string;
+  }[];
+  datalist: {
+    id: string;
+    name: string;
+    skill: string;
+    text: string;
+  }[];
+};
 
-const corpdatas = dataset;
-
-const Career: React.FunctionComponent = () => (
-  <>
-    {/* <h1 className={styles.toptitle}>Career</h1> */}
-    {/* <div className={styles.wrappercareer} id="section2">
-      <div className={styles.jobtext}>Part-time Job</div>
-      {corpdatas.datalist.map((corpdata) => (
-        <>
-          <div className={styles.corp}>
-            <div className={styles.corpspacer}>
-              <Image
-                src={`/images${corpdata.image}`}
-                width={150}
-                height={70}
-                className={styles.corpicon}
-              />
-              <div>{corpdata.term}</div>
+const Career: React.FunctionComponent<Props> = ({ datalist, skill }) => {
+  return (
+    <>
+      <div className={styles.container}>
+        <div className={styles.jobtext} id="section2">
+          Skill && Part-time Job
+        </div>
+        <Grid container spacing={2} justify="center">
+          <Grid item xs={3} />
+          <Grid item xs={12} md={3}>
+            <Skill skill={skill} />
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <div className={styles.wrapmap}>
+              {datalist.map((d) => (
+                <div key={d.id}>
+                  <div className={styles.name}>・{d.name}</div>
+                  <div className={styles.text}>
+                    - {d.text} [{d.skill}]
+                  </div>
+                  <div className={styles.spacer} />
+                </div>
+              ))}
             </div>
-            <Paper elevation={3} className={styles.corptext}>
-              <div className={styles.text}>
-                {corpdatas.text[corpdata.id]} ({corpdata.skill})
-              </div>
-            </Paper>
-          </div>
-        </>
-      ))}
-      <div className={styles.spacer_bottom} />
-      <p>Contact</p>
-      <EmailIcon fontSize="large" />
-      <div>
-        <span className={styles.line}>sugar.king.contact@gmail.com</span>
+          </Grid>
+          {/* </div> */}
+        </Grid>
       </div>
-    </div> */}
-    <div className={styles.jobtext} id="section2">
-      Part-time Job
-    </div>
-    <section id="conference-timeline">
-      {/* <div className="timeline-start"></div> */}
-      {corpdatas.datalist.map((corpdata) => (
-        <>
-          <div className="conference-center-line"></div>
-          <div className="conference-timeline-content">
-            <div className="timeline-article">
-              {corpdata.id % 2 != 0 && (
-                <>
-                  <div className="content-left-container">
-                    {corpdata.name}
-                    <div className="content-left">
-                      <div>
-                        {corpdatas.text[corpdata.id - 1]}
-                        <div>({corpdata.skill})</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="meta-date">
-                    <span className="date">{corpdata.term}</span>
-                    <span className="month">{corpdata.season}</span>
-                  </div>
-                </>
-              )}
-              {corpdata.id % 2 == 0 && (
-                <>
-                  <div className="content-right-container">
-                    {corpdata.name}
-                    <div className="content-right">
-                      <div>
-                        {corpdatas.text[corpdata.id - 1]}
-                        <div>({corpdata.skill})</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="meta-date">
-                    <span className="date">{corpdata.term}</span>
-                    <span className="month">{corpdata.season}</span>
-                  </div>
-                </>
-              )}
-            </div>
-          </div>
-        </>
-      ))}
-      {/* <div className="timeline-end"></div> */}
-    </section>
-  </>
-);
+    </>
+  );
+};
 export default Career;
